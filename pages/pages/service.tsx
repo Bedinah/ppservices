@@ -26,14 +26,12 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="h-full w-full px-12 py-4">
-      <div className="flex justify-between">
-        <div>
-          <div className="w-[36rem]">
-            <div className="font-semibold text-[3rem] leading-snug mt-[10rem] mb-6">
-              services I <br /> Offer
+    <div className=" flex justify-center  min-h-screen w-full py-4 gap-[18rem] ">
+          <div className="w-[30%]">
+            <div className="font-bold text-[4rem] leading-[1.1] mt-[6rem]">
+              services I <br/> offer
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-3 mt-8">
               <hr className="bg-[#333333] w-20 h-[2px] mt-3" />
 
               <p className="text-base mb-2">
@@ -42,19 +40,18 @@ const Services = () => {
                 making existing systems run smoother, I 'm all about making
                 technology work for you.{" "}
               </p>
-            </div>
           </div>
         </div>
-        <div className="w-[35rem]" >
+        <div className="w-[25%] mt-[6rem]" >
           {services?.map((data: any, index: any) => (
             <>
               <Divider/>
-              <div className="flex gap-3 justify-center">
+              <div className="flex gap-3 justify-center font-semibold text-base">
                 <div>{data?.nindex}</div>
                 <div>
-                  <div className="font-semibold text-[2rem]">{data?.names}</div>
-                  <div className="flex justify-between">
-                    <p>{data?.link}</p>
+                  <div className="font-semibold text-[2.5rem]">{data?.names}</div>
+                  <div className="flex justify-between mt-4">
+                    <p className="font-normal">{data?.link}</p>
                     <PiArrowCircleUpRightFill color="#8873F0" size={44} />
                   </div>
                 </div>
@@ -63,7 +60,6 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 export default Services;
