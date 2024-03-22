@@ -17,9 +17,13 @@
 }
 
 body {
-  color: #333333;
-  background:#FFFAFA;
+  color: #ececec;
+  background-color: #02141c;
   font-size: small;
+}
+
+.tajawal {
+  font-family: var(--font-tajawal);
 }
 
 @layer utilities {
