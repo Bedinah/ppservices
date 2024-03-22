@@ -1,10 +1,30 @@
-import { Space } from "antd";
+import { Divider, Space } from "antd";
 import { FaReact } from "react-icons/fa";
 
+const experiences = [
+  {
+    years: "2023-present",
+    role: " Frontend Developer",
+    company: "Samphone",
+  },
+  {
+    years: "2022-2023",
+    role: " Frontend Developer",
+    company: "Umurava ltd",
+  },
+  {
+    years: "2019-2019",
+    role: "Frontend Developer",
+    company: "lllllll",
+  },
+];
+
+
+
 const Experience = () => {
-    return(
-<div className="min-h-screen w-full py-4 bg-[#fcda69] flex justify-center gap-3">
-      <div className="w-[35%]">
+  return (
+    <div className="min-h-screen w-full py-4 gap-[18rem] bg-[#838383] lg:flex justify-center">
+      <div className="lg:w-[35%]">
         <div className="font-bold text-[4rem] leading-[1.1] mt-[6rem]">
           Skills & <br />
           Experience
@@ -19,28 +39,45 @@ const Experience = () => {
           </p>
         </div>
         <div className="mt-20">
-        <div className="font-normal text-[2rem] ">
-          Skills 
-        </div>
-        <div className="w-[22rem] flex flex-wrap gap-6">
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        </div>
-        <div>
+          <div className="font-normal text-[2rem] mb-4 ">
+            Skills
+          </div>
+          <div className="w-[22rem] flex flex-wrap gap-6">
+            <span><FaReact size={45} />
+              <p>React</p></span>
+            <FaReact size={45} />
+            <FaReact size={45} />
+            <FaReact size={45} />
+            <FaReact size={45} />
+            <FaReact size={45} />
+            <FaReact size={45} />
+            <FaReact size={45} />
+            <FaReact size={45} />
+          </div>
+          <div>
 
-        </div>
+          </div>
         </div>
       </div>
-      <div className="w-[50%]"></div>
-  </div>
-    )
-  
+      <div className="lg:w-[25%] mt-[6rem]">
+        <h1 className="font-bold text-[2rem] text-start mb-10 ">Experience</h1>
+        {experiences?.map((data: any, index: any) => (
+          <>
+            <Divider />
+            <div className="flex gap-3 justify-center font-semibold text-base">
+              <div className="mr-4">{data?.years}</div>
+              <div>
+                <div className="font-semibold text-[2rem]">{data?.role}</div>
+                <div className="flex justify-between mt-6">
+                  <p className="font-normal">{data?.company}</p>
+                </div>
+              </div>
+            </div>
+          </>
+        ))}
+      </div>
+    </div>
+  )
+
 };
 export default Experience;
