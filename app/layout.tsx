@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Tajawal } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+
+
+const tajawal_init = Tajawal({
+  subsets: ["latin"],
+  weight: ['200', '300','400','500', '700','800', '900'],
+  variable: '--font-tajawal'
+});
 
 export const metadata: Metadata = {
   title: "(*_*) <bedina/>",
@@ -16,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={tajawal_init.variable}>{children}</body>
     </html>
   );
 }
+
+

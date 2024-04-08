@@ -1,46 +1,69 @@
-import { Space } from "antd";
+import { Divider } from "antd";
 import { FaReact } from "react-icons/fa";
 
+const experiences = [
+  {
+    years: "2023-present",
+    role: " Frontend Developer",
+    company: "Samphone",
+  },
+  {
+    years: "2022-2023",
+    role: " Frontend Developer",
+    company: "Umurava ltd",
+  },
+  {
+    years: "2019-2019",
+    role: "Frontend Developer",
+    company: "lllllll",
+  },
+];
+
 const Experience = () => {
-    return(
-<div className="min-h-screen w-full py-4 bg-[#fcda69] flex justify-center gap-3">
-      <div className="w-[35%]">
-        <div className="font-bold text-[4rem] leading-[1.1] mt-[6rem]">
-          Skills & <br />
-          Experience
+  return (
+    <div className="h-full w-full">
+      <div className="font-bold text-[3rem] text-[#1E818E]">Skills</div>
+      <div className=" flex flex-wrap justify-around">
+        <div className="w-[15rem] shadow-2xl p-10">
+          <h1 className="text-lg font-semibold">Frontend</h1>
+          <Divider style={{ borderColor: "#1E818E" }} />
+          <ul className="text-base font-medium">
+            <li>ReactJs</li>
+            <li>NextJs</li>
+            <li>TypeScript</li>
+            <li>React Native</li>
+          </ul>
         </div>
-        <div className="flex gap-3 mt-10">
-          <hr className="bg-[#333333] w-20 h-[2px] mt-3" />
-
-          <p className="text-base ">
-            Hi! I 'm a Software Developer excited about creating awesome digital
-            solutions. Whether its building apps, fixing bugs or making existing
-            systems run smoother, I 'm all about making technology work for you.{" "}
-          </p>
+        <div className="w-[15rem] shadow-2xl p-10">
+          <h1 className="text-lg font-semibold">Backend</h1>
+          <Divider style={{ borderColor: "#1E818E" }} />
+          <ul className="text-base font-medium">
+            <li>NodeJs</li>
+            <li>MongoDB</li>
+          </ul>
         </div>
-        <div className="mt-20">
-        <div className="font-normal text-[2rem] ">
-          Skills 
+        <div className="w-[15rem] shadow-2xl p-10">
+          <h1 className="text-lg font-semibold">Styling</h1>
+          <Divider style={{ borderColor: "#1E818E" }} />
+          <ul className="text-base font-medium">
+            <li>Css</li>
+            <li>Tailwinc css</li>
+            <li>Styled components</li>
+          </ul>
         </div>
-        <div className="w-[22rem] flex flex-wrap gap-6">
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        <FaReact size={45}/>
-        </div>
-        <div>
-
-        </div>
+        <div className="w-[15rem] shadow-2xl p-10">
+          <h1 className="text-lg font-semibold">Others</h1>
+          <Divider style={{ borderColor: "#1E818E" }} />
+          <ul className="text-base font-medium">
+            <li>React.Js</li>
+            <li>Next.Js</li>
+            <li>React Native</li>
+            <li>TypeScript</li>
+          </ul>
         </div>
       </div>
-      <div className="w-[50%]"></div>
-  </div>
-    )
-  
+      <div className="w-full h-[.5px] bg-[#1E818E] mt-28"></div>
+    </div>
+  );
 };
 export default Experience;
