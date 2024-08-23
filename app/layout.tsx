@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
 import "./globals.css";
 
-
-
 const tajawal_init = Tajawal({
   subsets: ["latin"],
   weight: ['200', '300','400','500', '700','800', '900'],

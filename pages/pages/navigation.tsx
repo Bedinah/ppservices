@@ -2,7 +2,7 @@
 
 const Navigation = () => {
   return (
-    <div className="w-full h-32 flex">
+    <div className="w-full h-32 flex shadow-sm">
       bee
     </div>
   )
