@@ -1,40 +1,31 @@
 import Image from "next/image";
+import React from "react";
+import Typewriter from "../components/TypeWriter";
+import Navigation from "./navigation";
+import Profileimg from '../../public/images/profileimg.png'
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   return (
-    <div className="w-full min-h-screen ">
-      <div className="flex flex-wrap justify-between pt-20 ">
-        <div className="w-[40rem] ">
-          <div className=" font-bold text-[3rem] text-center text-[#1E818E] my-16  ">
-            Hello and Welcome !
+    <div className="w-full min-h-screen">
+      <Navigation />
+      <div className="container mx-auto">
+        <div className="flex flex-wrap gap-4 mt-5 2xl:mt-24 ">
+          <div className="font-bold text-[2.8rem] xl:text-[5rem] leading-[1.1] w-full lg:w-[50%] mt-20">
+            <div className=" font-semibold text-5xl  text-[#8a7962] mb-6 lg:mb-0">
+              <Typewriter text="Hello and Welcome !" delay={200} />
+            </div>
+            <div className="mt-28">
+              I 'm Bazubagira Bernardine
+              <p className="text-3xl">a <span className="text-[#8a7962]">passionate creative</span> software Engineer.</p>
+            </div>
           </div>
-          <p className="text-xl font-light mt-40 ">
-            I'm a passionate Software Engineer excited about creating awesome
-            digital solutions. Whether it's building apps, fixing bugs, or
-            making existing systems run smoother, I love pushing the boundaries
-            of technology and innovating to solve problems.
-          </p>
+          <Image src={Profileimg} alt="profile img" />
         </div>
-        <div className="w-[50rem]">
-          <div className="font-bold text-[3.5rem] leading-[1.1] text-center mb-14">
-            I 'm Bazubagira, a{" "}
-            <span className="text-[#1E818E]">passionate creative</span> software
-            developer.
-          </div>
-          <Image
-            className="float-right"
-            src="/images/userimg.png"
-            alt="profile image"
-            width={350}
-            height={350}
-          />
-        </div>
+        <span className="font-medium text-sm float-right mt-4 p-3">
+          <i>"Nta muntu uguha agaciro, Agaciro ni wowe ukiha"</i>
+        </span>
+        <div className="w-full h-[.5px] bg-[#3f2202] mt-14"></div>
       </div>
-
-      <span className="font-medium text-sm float-right mt-4">
-        <i>"Nta muntu uguha agaciro, Agaciro ni wowe ukiha"</i>
-      </span>
-      <div className="w-full h-[.5px] bg-[#1E818E] mt-14"></div>
     </div>
   );
 };
