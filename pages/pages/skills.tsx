@@ -1,25 +1,33 @@
 import { Divider } from "antd";
-import { FaReact } from "react-icons/fa";
 
-const experiences = [
+const skill = [
   {
-    years: "2023-present",
-    role: " Frontend Developer",
-    company: "Samphone",
+    title: "Frontend",
+    skill1: "ReactJs",
+    skill2: "NextJs",
+    skill3: "TypeScript",
+    skill4: "React Native",
   },
   {
-    years: "2022-2023",
-    role: " Frontend Developer",
-    company: "Umurava ltd",
+    title: "Backend",
+    skill1: "NodeJs",
+    skill2: "MongoDB",
   },
   {
-    years: "2019-2019",
-    role: "Frontend Developer",
-    company: "lllllll",
+    title: "Styling",
+    skill1: "Css",
+    skill2: "Tailwinc css",
+    skill3: "Styled components",
+  },
+  {
+    title: "Others",
+    skill1: "Agile Methodologies",
+    skill2: "Communication skills",
+    skill3: "Cross-functional collaboration skills",
   },
 ];
 
-const Experience = () => {
+const SkillsExperience = () => {
   return (
     <div className="h-full w-full p-4 2xl:p-0">
       <div className="container mx-auto">
@@ -29,47 +37,24 @@ const Experience = () => {
           </div>
         </div>
         <div className=" flex flex-wrap justify-around ">
-          <div className="w-[15rem] shadow-xl p-10">
-            <h1 className="text-lg font-semibold">Frontend</h1>
-            <Divider style={{ borderColor: "#3f2202" }} />
-            <ul className="text-base font-medium">
-              <li>ReactJs</li>
-              <li>NextJs</li>
-              <li>TypeScript</li>
-              <li>React Native</li>
-            </ul>
-          </div>
-          <div className="w-[15rem] shadow-2xl p-10">
-            <h1 className="text-lg font-semibold">Backend</h1>
-            <Divider style={{ borderColor: "#3f2202" }} />
-            <ul className="text-base font-medium">
-              <li>NodeJs</li>
-              <li>MongoDB</li>
-            </ul>
-          </div>
-          <div className="w-[15rem] shadow-2xl p-10">
-            <h1 className="text-lg font-semibold">Styling</h1>
-            <Divider style={{ borderColor: "#3f2202" }} />
-            <ul className="text-base font-medium">
-              <li>Css</li>
-              <li>Tailwinc css</li>
-              <li>Styled components</li>
-            </ul>
-          </div>
-          <div className="w-[15rem] shadow-2xl p-10">
-            <h1 className="text-lg font-semibold">Others</h1>
-            <Divider style={{ borderColor: "#3f2202" }} />
-            <ul className="text-base font-medium">
-              <li>React.Js</li>
-              <li>Next.Js</li>
-              <li>React Native</li>
-              <li>TypeScript</li>
-            </ul>
-          </div>
+          {skill?.map((data, index) => (
+            <>
+              <div className="w-[20rem] h-[15rem] rounded-md p-10" style={{ backgroundColor: '#e5e2d7', boxShadow: '5px 5px 2px #8a7962 inset' }}>
+                <h1 className="text-lg font-semibold">{data?.title}</h1>
+                <Divider style={{ borderColor: "#3f2202" }} />
+                <ul className="text-base font-medium">
+                  <li>{data?.skill1}</li>
+                  <li>{data?.skill2}</li>
+                  <li>{data?.skill3}</li>
+                  <li>{data?.skill4}</li>
+                </ul>
+              </div>
+            </>
+          ))}
         </div>
         <div className="w-full h-[.5px] bg-[#3f2202] mt-28"></div>
       </div>
     </div>
   );
 };
-export default Experience;
+export default SkillsExperience;

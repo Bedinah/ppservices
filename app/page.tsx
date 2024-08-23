@@ -2,7 +2,7 @@ import AboutMe from "@/pages/pages/about";
 import ContactMe from "@/pages/pages/contactus";
 import LandingPage from "@/pages/pages/landing";
 import Projects from "@/pages/pages/projects";
-import Experience from "@/pages/pages/skills";
+import SkillsExperience from "@/pages/pages/skills";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         <LandingPage />
         <AboutMe />
         <Projects />
-        <Experience />
+        <SkillsExperience />
         <ContactMe />
       </main>
     </>
