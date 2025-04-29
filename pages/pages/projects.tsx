@@ -19,9 +19,7 @@ const Projects = () => {
               <hr className="bg-[#333333] w-full h-[2px] my-2" />
               <div className="flex justify-between px-4">
                 <div className="font-semibold text-[1.6rem]">Umurava website</div>
-                <a href="https://umurava.africa" target="_blank">
-                  <PiArrowCircleUpRightFill color="#8f600e" size={48} />
-                </a>
+                <PiArrowCircleUpRightFill color="#8f600e" size={48} />
               </div>
               <p className="my-1 px-4">Web landing page</p>
               <Image src={UmuravaImage} alt="landingpage" className="mt-4" />
@@ -61,7 +59,7 @@ const Projects = () => {
             <p className="my-1 px-4">Web landing page</p>
             <Image src={LandingImage} alt="lap" className="mt-6" />
           </div>
-          
+
         </div>
         <div className="w-full h-[.5px] bg-[#3f2202] mt-14"></div>
       </div>
