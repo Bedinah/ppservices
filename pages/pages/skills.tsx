@@ -39,7 +39,7 @@ const SkillsExperience = () => {
         <div className=" flex flex-wrap justify-around ">
           {skill?.map((data, index) => (
             <>
-              <div className="w-[20rem] h-[15rem] rounded-md p-10" style={{ backgroundColor: '#e5e2d7', boxShadow: '5px 5px 2px #8a7962 inset' }}>
+              <div key={index} className="w-[20rem] h-[15rem] rounded-md p-10" style={{ backgroundColor: '#e5e2d7', boxShadow: '5px 5px 2px #8a7962 inset' }}>
                 <h1 className="text-lg font-semibold">{data?.title}</h1>
                 <Divider style={{ borderColor: "#3f2202" }} />
                 <ul className="text-base font-medium">

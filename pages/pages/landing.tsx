@@ -6,8 +6,8 @@ import Profileimg from '../../public/images/profileimg.png'
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="w-full min-h-screen">
-      <Navigation />
+    <div className="w-full min-h-screen" style={{ background: 'linear-gradient(135deg, #E6E6FA, #CBC3E3)' }}>
+      <div className="bg-[#CBC3E3]"></div>
       <div className="container mx-auto">
         <div className="flex flex-wrap gap-4 mt-5 2xl:mt-24 ">
           <div className="font-bold text-[2.8rem] xl:text-[5rem] leading-[1.1] w-full lg:w-[50%] mt-20">
